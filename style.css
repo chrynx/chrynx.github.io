@@ -1,0 +1,358 @@
+/* 
+    lightblackish  =   373c40
+    lightgreyish   =   afc1ca
+    lightblueish   =   6c9fc0
+    blueish        =   4f738c
+    darkblueish    =   25353f
+*/
+
+/* 
+    z-index
+navbar    =  200
+backdrop  =  100
+
+*/
+body {
+    background: #4f738c;
+    border: 5px solid #373c40;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Gamja Flower', cursive;
+}
+
+
+
+
+/* ABOUT SECTION  */
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #373c40;
+    height: 10vh;
+    width: 100%;
+}
+/* ABOUT SECTION END */
+
+
+
+
+/* PROJECTS SECTION */
+#projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #373c40;
+    height: 10vh;
+    width: 100%;
+    display: none;
+}
+/* PROJECTS SECTION END */
+
+
+
+
+
+/* CONTACT SECTION */
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #373c40;
+    height: 10vh;
+    width: 100%;
+    display: none;
+}
+/* CONTACT SECTION END */
+
+
+
+
+
+
+/* BACKDROP */
+#backdrop {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: #373c40;
+    opacity: 0.5;
+    transform: translateY(-100vh);
+}
+/* BACKDROP ENDS */
+/* NAVBAR */
+nav {
+    z-index: 200;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    background: #6c9fc0;
+    border-right: 5px solid #373c40;
+    border-bottom: 5px solid #373c40;
+    transform: translateX(-100%);
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    color: #373c40;
+    height: 300px;
+    width: 100%;
+}
+nav ul li {
+    font-size: 30px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+}
+nav ul li:hover {
+    transition: 0.5s;
+    background: #373c40;
+    color: #4f738c;
+}
+/* NAVBAR ENDS */
+
+
+/* SPINNER CSS BELOW */
+#navbarBurger {
+    margin: 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border: 5px solid black;
+    background: red;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#navbarBurger:hover {
+    animation: spin 1s infinite linear;
+}
+
+#navbarBurger div {
+    height: 7px;
+    position: absolute;
+    width: 50px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    background: black;
+    font-size: 0;
+}
+#navbarBurger:hover .first{
+    animation: first 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+#navbarBurger:hover .second{
+    animation: second 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+#navbarBurger:hover .third {
+    animation: third 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+#navbarBurger:hover .fourth {
+    animation: fourth 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+#navbarBurger:hover .fifth{
+    animation: fifth 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+#navbarBurger:hover .sixth{
+    animation: sixth 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+#navbarBurger:hover .seventh {
+    animation: seventh 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+#navbarBurger:hover .eighth {
+    animation: eighth 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+#navbarBurger:hover .ninth {
+    animation: ninth 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+.first {
+    animation: firstOut 0.5s ease-in-out;
+}
+.second {
+    animation: secondOut 0.5s ease-in-out;
+}
+.third {
+    animation: thirdOut 0.5s ease-in-out;
+}
+.fourth {
+    animation: fourthOut 0.5s ease-in-out;
+}
+.fifth {
+    animation: fifthOut 0.5s ease-in-out;
+}
+.sixth {
+    animation: sixthOut 0.5s ease-in-out;
+}
+.seventh {
+    animation: seventhOut 0.5s ease-in-out;
+}
+.eighth {
+    animation: eighthOut 0.5s ease-in-out;
+}
+.ninth {
+    animation: ninthOut 0.5s ease-in-out;
+}
+
+@keyframes spin {
+    0% {transform: rotate(0);}
+    100% {transform: rotate(360deg);}
+}
+
+
+@keyframes first {
+    0% {transform: rotate(0deg);}
+    100% {
+        transform: rotate(40deg);
+        opacity: 1;
+        background: red;
+    }
+}
+@keyframes firstOut {
+    0% {transform: rotate(40deg);}
+    100% {
+        transform: rotate(0deg);
+        opacity: 0.1;
+    }
+}
+@keyframes second {
+    0% {transform: rotate(0deg);}
+    100% {
+        transform: rotate(80deg);
+        opacity: 1;
+        background: red;
+    }
+}
+@keyframes secondOut {
+    0% {transform: rotate(80deg);}
+    100% {
+        transform: rotate(0deg);
+        opacity: 0.1;
+    }
+}
+@keyframes third {
+    0% {transform: rotate(0deg);}
+    100% {
+        transform: rotate(120deg);
+        opacity: 1;
+        background: red;
+    }
+}
+@keyframes thirdOut {
+    0% {transform: rotate(120deg);}
+    100% {
+        transform: rotate(0deg);
+        opacity: 0.1;
+    }
+}
+@keyframes fourth {
+    0% {transform: rotate(0deg);}
+    100% {
+        transform: rotate(160deg);
+        opacity: 1;
+        background: red;
+    }
+}
+@keyframes fourthOut {
+    0% {transform: rotate(160deg);}
+    100% {
+        transform: rotate(0deg);
+        opacity: 0.1;
+    }
+}
+@keyframes fifth {
+    0% {transform: rotate(0deg);}
+    100% {
+        transform: rotate(200deg);
+        opacity: 1;
+        background: red;
+    }
+}
+@keyframes fifthOut {
+    0% {transform: rotate(200deg);}
+    100% {
+        transform: rotate(0deg);
+        opacity: 0.1;
+    }
+}
+@keyframes sixth {
+    0% {transform: rotate(0deg);}
+    100% {
+        transform: rotate(240deg);
+        opacity: 1;
+        background: red;
+    }
+}
+@keyframes sixthOut {
+    0% {transform: rotate(240deg);}
+    100% {
+        transform: rotate(0deg);
+        opacity: 0.1;
+    }
+}
+@keyframes seventh {
+    0% {transform: rotate(0deg);}
+    100% {
+        transform: rotate(280deg);
+        opacity: 1;
+        background: red;
+    }
+}
+@keyframes seventhOut {
+    0% {transform: rotate(280deg);}
+    100% {
+        transform: rotate(0deg);
+        opacity: 0.1;
+    }
+}
+@keyframes eighth {
+    0% {transform: rotate(0deg);}
+    100% {
+        transform: rotate(320deg);
+        opacity: 1;
+        background: red;
+    }
+}
+@keyframes eighthOut {
+    0% {transform: rotate(320deg);}
+    100% {
+        transform: rotate(0deg);
+        opacity: 0.1;
+    }
+}
+@keyframes ninth {
+    0% {transform: rotate(0deg);}
+    100% {
+        transform: rotate(360deg);
+        opacity: 1;
+        background: red;
+    }
+}
+@keyframes ninthOut {
+    0% {transform: rotate(360deg);}
+    100% {
+        transform: rotate(0deg);
+        opacity: 0.1;
+    }
+}
+

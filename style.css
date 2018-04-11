@@ -10,6 +10,7 @@
     z-index
 navbar    =  200
 backdrop  =  100
+spinner   =  50
 
 */
 body {
@@ -18,19 +19,79 @@ body {
     height: 100vh;
     width: 100%;
     font-family: 'Gamja Flower', cursive;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    outline: none;
+    cursor: pointer;
+    color: #4f738c;
+}
 
+.content {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 90%;
+    overflow-y: scroll;
+}
 
 
 /* ABOUT SECTION  */
 #about {
     display: flex;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
-    color: #373c40;
-    height: 10vh;
+    color: #afc1ca;
+    height: 90vh;
     width: 100%;
+    overflow-y: scroll;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.profilePic {
+    height: 250px;
+    width: 250px;
+    border: 5px solid #373c40;
+    border-radius: 50%;
+}
+#about hr {
+    margin: 4px;
+    border: 1px solid #373c40;
+}
+#about h1 {
+    font-size: 40px;
+}
+#about h3 {
+    font-size: 20px;
+}
+#about .skills {
+    margin-top: 5px;
+    width: 100%;
+    background: #373c40;
+    font-size: 40px;
+}
+#about .devicons {
+    padding: 10px;
+    font-size: 40px;
+}
+#about .devicons div {
+    display: inline-block;
+}
+#about .devicons div p {
+    font-size: 20px;
+    text-transform: none;
 }
 /* ABOUT SECTION END */
 
@@ -40,12 +101,40 @@ body {
 /* PROJECTS SECTION */
 #projects {
     display: flex;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
-    background: #373c40;
-    height: 10vh;
+    color: #373c40;
+    height: 90vh;
     width: 100%;
+    overflow-y: scroll;
+    text-align: center;
+    text-transform: uppercase;
     display: none;
+}
+#projects hr {
+    margin: 4px;
+    border: 1px solid #373c40;
+}
+
+#projects h1 {
+    font-size: 40px;
+}
+#projects h3 {
+    font-size: 20px;
+}
+#projects .projectTitle {
+    color: #afc1ca;
+    margin: 5px auto;
+    width: 100%;
+    background: #373c40;
+    font-size: 40px;
+}
+
+#projects .globalClicker {
+    border: 5px solid #373c40;
+    background: #afc1ca;
+    padding: 5px;
 }
 /* PROJECTS SECTION END */
 
@@ -56,12 +145,25 @@ body {
 /* CONTACT SECTION */
 #contact {
     display: flex;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
-    background: #373c40;
-    height: 10vh;
+    color: #afc1ca;
+    height: 90vh;
     width: 100%;
+    overflow-y: scroll;
+    text-align: center;
+    text-transform: uppercase;
     display: none;
+}
+#contact div {
+    margin: 10px 0;
+}
+#contact h1 {
+    font-size: 40px;
+}
+#contact h3 {
+    font-size: 20px;
 }
 /* CONTACT SECTION END */
 
@@ -83,6 +185,10 @@ body {
     transform: translateY(-100vh);
 }
 /* BACKDROP ENDS */
+
+
+
+
 /* NAVBAR */
 nav {
     z-index: 200;
@@ -116,6 +222,7 @@ nav ul li {
     width: 100%;
 }
 nav ul li:hover {
+    cursor: pointer;
     transition: 0.5s;
     background: #373c40;
     color: #4f738c;
@@ -123,9 +230,15 @@ nav ul li:hover {
 /* NAVBAR ENDS */
 
 
+
+
+
 /* SPINNER CSS BELOW */
 #navbarBurger {
-    margin: 10px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 50;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -136,6 +249,7 @@ nav ul li:hover {
     background: red;
     border-radius: 50%;
     overflow: hidden;
+    animation: spin 10s infinite linear;
 }
 #navbarBurger:hover {
     animation: spin 1s infinite linear;

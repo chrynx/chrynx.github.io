@@ -102,7 +102,7 @@ a:hover {
 #projects {
     display: flex;
     flex-flow: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     color: #373c40;
     height: 90vh;
@@ -131,7 +131,9 @@ a:hover {
     font-size: 40px;
 }
 
-#projects .globalClicker {
+#projects .globalClicker, .beatTheHoff, .ralphRedditClone, .hiddenTravellr, .onlineDatr {
+    margin-top: 10px;
+    width: 90%;
     border: 5px solid #373c40;
     background: #afc1ca;
     padding: 5px;
